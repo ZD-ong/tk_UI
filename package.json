@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ZD-ong/tk_UI/issues"
   },
-  "homepage": "https://github.com/ZD-ong/tk_UI#readme"
+  "homepage": "https://github.com/ZD-ong/tk_UI#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
