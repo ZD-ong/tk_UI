@@ -1,4 +1,8 @@
 .tk-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
   font-size: var(--font-size);
   height: var(--button-height);
   padding: 0 1em;
@@ -14,4 +18,19 @@
 }
 .tk-button:focus {
   outline: none;
+}
+.tk-button > .icon {
+  order: 1;
+  margin-right: 0.3em;
+}
+.tk-button > .content {
+  order: 2;
+}
+.tk-button.icon-right > .icon {
+  order: 2;
+  margin-right: 0;
+  margin-left: 0.3em;
+}
+.tk-button.icon-right > .content {
+  order: 1;
 }
