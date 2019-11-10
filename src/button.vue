@@ -1,6 +1,6 @@
 <template>
     <button class="tk-button" :class="{[`icon-${iconPosition}`]: true}">
-        <tk-icon v-if="icon" :name="icon"></tk-icon>
+        <tk-icon class="icon" v-if="icon" :name="icon"></tk-icon>
         <div class="content">
             <slot></slot>
         </div>
