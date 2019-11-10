@@ -1,6 +1,7 @@
 <template>
     <button class="tk-button" :class="{[`icon-${iconPosition}`]: true}">
-        <tk-icon class="icon" v-if="icon" :name="icon"></tk-icon>
+        <tk-icon class="icon" v-if="icon && !loading" :name="icon"></tk-icon>
+        <tk-icon class="loading icon" v-if="loading" name="loading"></tk-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -10,6 +11,10 @@
 export default {
     props: {
         icon: {},
+        loading: {
+            type: Boolean,
+            default: false
+        },
         iconPosition: {
             type: String,
             default: 'left',
@@ -21,6 +26,14 @@ export default {
 }
 </script>
 <style lang="scss">
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .tk-button {
     display: inline-flex;
     justify-content: center;
@@ -34,7 +47,7 @@ export default {
     background: var(--button-bg);
 
     &:hover {
-        border-color: var(--border-color);
+        border-color: var(--border-color-hover);
     }
     &:active {
         background-color: var(--button-active-bg);
@@ -58,6 +71,9 @@ export default {
         > .content {
             order: 1;
         }
+    }
+    .loading {
+        animation: spin 1.5s infinite linear;
     }
 }
 </style>
