@@ -8,7 +8,12 @@
     </button>
 </template>
 <script>
+import Icon from './icon'
+
 export default {
+    components: {
+        'tk-icon': Icon 
+    },
     props: {
         icon: {},
         loading: {
