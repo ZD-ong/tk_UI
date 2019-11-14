@@ -1,5 +1,5 @@
 <template>
-    <button class="tk-button" :class="{[`icon-${iconPosition}`]: true}">
+    <button class="tk-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
         <tk-icon class="icon" v-if="icon && !loading" :name="icon"></tk-icon>
         <tk-icon class="loading icon" v-if="loading" name="loading"></tk-icon>
         <div class="content">

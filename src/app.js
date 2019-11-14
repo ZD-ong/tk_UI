@@ -13,7 +13,10 @@ new Vue({
 })
 
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 const expect = chai.expect
+
 
 // 单元测试
 
@@ -88,4 +91,22 @@ const expect = chai.expect
 
     vm.$el.remove() // 清除button元素
     vm.$destroy() // 销毁button对象
+}
+
+// 五、使用chai-spies模拟click事件
+{
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+        propsData: {
+            icon: 'setting'
+        }
+    })
+    vm.$mount() // 将按钮挂载
+    let spy = chai.spy(() => {})
+
+    vm.$on('click', spy)
+
+    let button = vm.$el
+    button.click()
+    expect(spy).to.have.been.called() // 希望这个函数被执行
 }
