@@ -1,11 +1,14 @@
 # tk-wheel
+
+[![Build Status](https://travis-ci.org/ZD-ong/tk_UI.svg?branch=master)](https://travis-ci.org/ZD-ong/tk_UI)
+
 this is a awesome UI framwork using vue
 
 - author: Dong Zuo
 
 ## Introduction
 
-1. `CSS` style
+`CSS` style
 
 Before using this framework, you should use 'border-box'
 
@@ -38,13 +41,15 @@ You also need to set variables such as global colors (subsequently changed to `s
 
 This feature is supported by IE15 and above.
 
-2. install `tk-wheel`
+## Install
+
+1. install `tk-wheel`
 
 ```javascript
 npm i --save tk-wheel
 ```
 
-3. import `tk-wheel`
+2. import `tk-wheel`
 
 ```javascript
 import { Button } from "tk-wheel";
