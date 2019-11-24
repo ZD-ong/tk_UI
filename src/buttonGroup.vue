@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    
+    name: 'TKButtonGroup'
 }
 </script>
 <style lang="scss">

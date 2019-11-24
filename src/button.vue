@@ -11,6 +11,7 @@
 import Icon from './icon'
 
 export default {
+    name: 'TKButton',
     components: {
         'tk-icon': Icon 
     },
