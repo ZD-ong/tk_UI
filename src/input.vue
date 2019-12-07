@@ -1,6 +1,10 @@
 <template>
     <div class="wrapper" :class="{error}">
-        <input :value="value" :disabled="disabled" :readonly="readyonly" type="text">
+        <input :value="value" :disabled="disabled" :readonly="readonly" type="text"
+            @change="$emit('change', $event)"
+            @input="$emit('input', $event)"
+            @focus="$emit('focus', $event)"
+            @blur="$emit('blur', $event)">
         <template v-if="error">
             <tk-icon name="error"></tk-icon>
             <span class="error-message">{{error}}</span>
@@ -22,7 +26,7 @@ export default {
             type: Boolean,
             default: false
         },
-        readyonly: {
+        readonly: {
             type: Boolean,
             default: false
         },

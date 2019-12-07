@@ -12,5 +12,11 @@ Vue.component('tk-input', Input)
 
 
 new Vue({
-    el: '#app'
+    el: '#app',
+    methods: {
+        inputChange(e){
+            console.log(e.target.value);
+            
+        }
+    }
 })
