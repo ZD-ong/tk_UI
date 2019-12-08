@@ -27,6 +27,16 @@
             margin: 20px;
         }
 
+        .wheel-block {
+            margin-top: 30px;
+        }
+
+        .wheel-block>p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
         body {
             font-size: var(--font-size);
         }
@@ -37,18 +47,29 @@
 </head>
 <body>
     <div id="app">
-        <tk-button icon="setting" icon-position="left">设置</tk-button>
-        <tk-button icon="download">下载</tk-button>
-        <tk-button icon="awsome" icon-position="right">赞</tk-button>
-        <tk-button :loading="true" icon-position="left">提交</tk-button>
-        <tk-button-group>
-            <tk-button icon="left" icon-position="left">上一步</tk-button>
-            <tk-button icon="right" icon-position="right">下一步</tk-button>
-        </tk-button-group>
-        <tk-input value="张三"></tk-input>
-        <tk-input value="李四" disabled></tk-input>
-        <tk-input value="王五" readyonly></tk-input>
-        <tk-input value="大山" v-model="message"></tk-input>
+        <h1>tk-wheel</h1>
+        <div class="wheel-block">
+            <p>tk-Button</p>
+            <tk-button icon="setting" icon-position="left">设置</tk-button>
+            <tk-button icon="download">下载</tk-button>
+            <tk-button icon="awsome" icon-position="right">赞</tk-button>
+            <tk-button :loading="true" icon-position="left">提交</tk-button>
+            <tk-button-group>
+                <tk-button icon="left" icon-position="left">上一步</tk-button>
+                <tk-button icon="right" icon-position="right">下一步</tk-button>
+            </tk-button-group>
+        </div>
+        <div class="wheel-block">
+            <p>tk-Input</p>
+            <tk-input value="张三"></tk-input>
+            <tk-input value="李四" disabled></tk-input>
+            <tk-input value="王五" readyonly></tk-input>
+            <tk-input value="大山" v-model="message"></tk-input>
+        </div>
+        <div class="wheel-block">
+            <p>tk-Toast</p>
+            <tk-button @click="showToast">点我</tk-button>
+        </div>
     </div>
     <script src="./src/app.js"></script>
     <!-- <script src="//at.alicdn.com/t/font_1445373_ff7jwcwoja.js"></script> -->

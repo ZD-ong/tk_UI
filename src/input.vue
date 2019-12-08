@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" :class="{error}">
+    <div class="tk-input" :class="{error}">
         <input :value="value" :disabled="disabled" :readonly="readonly" type="text"
             @change="$emit('change', $event.target.value)"
             @input="$emit('input', $event.target.value)"
@@ -45,7 +45,7 @@ $font-size: 12px;
 $box-shadow-color: rgba(0,0,0,0.5);
 $red: #f1453d;
 
-.wrapper {
+.tk-input {
     font-size: $font-size;
     display: inline-flex;
     align-items: center;
