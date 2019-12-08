@@ -13,10 +13,10 @@ Vue.component('tk-input', Input)
 
 new Vue({
     el: '#app',
+    data:{
+        message: 'hi'
+    },
     methods: {
-        inputChange(e){
-            console.log(e.target.value);
-            
-        }
+        
     }
 })
