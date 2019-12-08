@@ -20,8 +20,19 @@ new Vue({
         message: ''
     },
     methods: {
-        showToast() {
-            this.$toast('hello world')
+        showToast(status) {
+            this.$toast('toast提示你想要的数据', {
+                position: 'top',
+                status: status,
+                closeButton: {
+                    text: '关闭',
+                    callback(toast) {
+                        console.log('这里调用callback函数')
+                    }
+                },
+                autoClose: true,
+                autoCloseDelay: 1
+            })
         }
     },
     created() {

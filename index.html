@@ -68,7 +68,11 @@
         </div>
         <div class="wheel-block">
             <p>tk-Toast</p>
-            <tk-button @click="showToast">点我</tk-button>
+            <tk-button @click="showToast('info')">消息</tk-button>
+            <tk-button @click="showToast('success')">成功</tk-button>
+            <tk-button @click="showToast('warning')">警告</tk-button>
+            <tk-button @click="showToast('error')">错误</tk-button>
+
         </div>
     </div>
     <script src="./src/app.js"></script>
