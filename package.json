@@ -6,7 +6,9 @@
   "scripts": {
     "dev-test": "parcel watch test/* --no-cache & karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
-    "start": "parcel index.html --no-cache"
+    "start": "parcel index.html --no-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,9 @@
   },
   "homepage": "https://github.com/ZD-ong/tk_UI#readme",
   "dependencies": {
-    "vue": "^2.6.10",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },
   "devDependencies": {
@@ -40,7 +44,8 @@
     "sass": "^1.23.0",
     "sinon": "^7.5.0",
     "sinon-chai": "^3.3.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.2.0"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
