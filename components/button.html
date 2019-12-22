@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>按钮 | tk-wheel</title>
+    <meta name="description" content="题库项目常用组件">
+    
+    
+    <link rel="preload" href="/tk_UI/assets/css/0.styles.fac2a0fe.css" as="style"><link rel="preload" href="/tk_UI/assets/js/app.f3a82d53.js" as="script"><link rel="preload" href="/tk_UI/assets/js/3.8c28785e.js" as="script"><link rel="preload" href="/tk_UI/assets/js/15.7bb34127.js" as="script"><link rel="prefetch" href="/tk_UI/assets/js/1.e5bb185d.js"><link rel="prefetch" href="/tk_UI/assets/js/10.6e4e8ae4.js"><link rel="prefetch" href="/tk_UI/assets/js/11.5de765d7.js"><link rel="prefetch" href="/tk_UI/assets/js/12.4a972ab8.js"><link rel="prefetch" href="/tk_UI/assets/js/13.5c10bd91.js"><link rel="prefetch" href="/tk_UI/assets/js/14.e10a8cd5.js"><link rel="prefetch" href="/tk_UI/assets/js/16.4a98fd2c.js"><link rel="prefetch" href="/tk_UI/assets/js/17.5bd12ef5.js"><link rel="prefetch" href="/tk_UI/assets/js/18.3caba650.js"><link rel="prefetch" href="/tk_UI/assets/js/19.945af8fb.js"><link rel="prefetch" href="/tk_UI/assets/js/20.448ed747.js"><link rel="prefetch" href="/tk_UI/assets/js/4.e30bee3a.js"><link rel="prefetch" href="/tk_UI/assets/js/5.345aa845.js"><link rel="prefetch" href="/tk_UI/assets/js/6.842ad7d7.js"><link rel="prefetch" href="/tk_UI/assets/js/7.21db6044.js"><link rel="prefetch" href="/tk_UI/assets/js/8.49a6359a.js"><link rel="prefetch" href="/tk_UI/assets/js/9.0a2f4f1e.js">
+    <link rel="stylesheet" href="/tk_UI/assets/css/0.styles.fac2a0fe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/tk_UI/" class="home-link router-link-active"><!----> <span class="site-name">tk-wheel</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>入门</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tk_UI/components/button.html" class="active sidebar-link">按钮</a></li><li><a href="/tk_UI/components/input.html" class="sidebar-link">输入框</a></li><li><a href="/tk_UI/components/toast.html" class="sidebar-link">Toast</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="button-按钮"><a href="#button-按钮" class="header-anchor">#</a> Button 按钮</h1> <p><strong>常用的操作按钮</strong> <!----></p> <p>使用<code>type</code>、<code>icon</code>、<code>icon-position</code>、<code>loading</code>属性来定义 Button 的样式</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;tk-button icon=&quot;setting&quot; icon-position=&quot;left&quot;&gt;设置&lt;/tk-button&gt;
+&lt;tk-button icon=&quot;download&quot;&gt;下载&lt;/tk-button&gt;
+&lt;tk-button icon=&quot;awsome&quot; icon-position=&quot;right&quot;&gt;赞&lt;/tk-button&gt;
+&lt;tk-button :loading=&quot;true&quot; icon-position=&quot;left&quot;&gt;提交&lt;/tk-button&gt;
+</code></pre></div><p><strong>图标按钮</strong> <!---->
+只使用带icon的 Button 组件</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;tk-button icon=&quot;awsome&quot; icon-position=&quot;right&quot;&gt;&lt;/tk-button&gt;
+</code></pre></div><p><strong>按钮组</strong> <!---->
+除 Button 组件外，需在外部包裹<code>button-group-demo</code>组件</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;tk-button-group&gt;
+    &lt;tk-button icon=&quot;left&quot; icon-position=&quot;left&quot;&gt;上一步&lt;/tk-button&gt;
+    &lt;tk-button icon=&quot;right&quot; icon-position=&quot;right&quot;&gt;下一步&lt;/tk-button&gt;
+&lt;/tk-button-group&gt;
+</code></pre></div><p>额外引入<code>button-group-demo</code></p> <div class="language- extra-class"><pre class="language-text"><code>import Button from &quot;../../../src/button&quot;;
+import buttonGroup from &quot;../../../src/buttonGroup&quot;;
+export default {
+    components: {
+        'tk-button': Button,
+        'tk-button-group': buttonGroup
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tk_UI/start/" class="prev">快速上手</a></span> <span class="next"><a href="/tk_UI/components/input.html">输入框</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/tk_UI/assets/js/app.f3a82d53.js" defer></script><script src="/tk_UI/assets/js/3.8c28785e.js" defer></script><script src="/tk_UI/assets/js/15.7bb34127.js" defer></script>
+  </body>
+</html>
